@@ -4,6 +4,6 @@ metadata:
   name: {{ .Values.appName }}
   namespace: roboshop
 data:
-  REDIS_HOST: "172.16.5.4"
-  CATALOGUE_HOST: catalogue
-  CATALOGUE_PORT: "8080"
+  REDIS_HOST: "{{ .Values.config.REDIS_HOST }}"
+  CATALOGUE_HOST: "{{ .Values.config.CATALOGUE_HOST }}"
+  CATALOGUE_PORT: "{{ .Values.config.CATALOGUE_PORT }}"
