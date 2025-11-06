@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}
+  namespace: roboshop
+  labels:
+    app: {{ .Values.appName }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+    spec:
+      containers:
+        - name: {{ .Values.appName }}
+          image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.appName }}
+          ports:
+            - containerPort: {{ .values.service.containerPort }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.appName }}
