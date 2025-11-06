@@ -4,10 +4,10 @@ metadata:
   name: {{ .Values.appName }}
   namespace: roboshop
 spec:
-  type: {{.values.service.type }}
+  type: {{.Values.service.type }}
   selector:
     app: {{ .Values.appName }}
   ports:
     - protocol: TCP
       port: {{ .values.service.servicePort }}
-      targetPort: {{ .values.service.containerPort }}
+      targetPort: {{ .Values.service.containerPort }}
