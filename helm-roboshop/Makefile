@@ -1,8 +1,8 @@
-default:
+    default:
 	helm upgrade -i $(appName) . -f env-$(env)/$(appName).yaml
 
 
-dev:
+    dev:
 	git pull
 	helm upgrade -i cart . -f env-dev/cart.yaml
 	helm upgrade -i catalogue . -f env-dev/catalogue.yaml

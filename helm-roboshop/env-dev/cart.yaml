@@ -5,6 +5,3 @@ service:
   containerPort: 8080
   servicePort: 8080
   type: ClusterIP
-
-deployment:
-  replica: 1
