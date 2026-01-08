@@ -1,11 +1,10 @@
 appName: cart
+env: dev
 
 service:
   containerPort: 8080
   servicePort: 8080
   type: ClusterIP
 
-config:
-  REDIS_HOST: "172.16.5.4"
-  CATALOGUE_HOST: "catalogue"
-  CATALOGUE_PORT: "8080"
+deployment:
+  replica: 1

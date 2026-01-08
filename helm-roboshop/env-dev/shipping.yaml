@@ -1,0 +1,13 @@
+appName: shipping
+env: dev
+
+dbJob:
+  enabled: true
+  image: roboshopb82new.azurecr.io/roboshop-shipping-schema-loader:latest
+  jobName:
+     - file: app-user.sql
+       name: app-user
+     - file: schema.sql
+       name: schema
+     - file: master-data.sql
+       name: master-data
