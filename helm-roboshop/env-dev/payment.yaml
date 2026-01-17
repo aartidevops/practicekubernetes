@@ -1,2 +1,6 @@
 appName: payment
 env: dev
+
+
+externalSecret:
+  enabled: true

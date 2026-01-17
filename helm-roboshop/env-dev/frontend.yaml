@@ -5,3 +5,6 @@ service:
   servicePort: 80
 
 env: dev
+
+externalSecret:
+  enabled: true

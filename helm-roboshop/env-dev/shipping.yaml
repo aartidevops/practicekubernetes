@@ -11,3 +11,7 @@ dbJob:
        name: schema
      - file: master-data.sql
        name: master-data
+
+externalSecret:
+  enabled: true
+

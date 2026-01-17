@@ -7,3 +7,6 @@ dbJob:
   jobName:
     - file: master-data.js
       name: master-data
+
+externalSecret:
+  enabled: true
