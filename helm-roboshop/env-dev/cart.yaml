@@ -1,2 +1,5 @@
 appName: cart
 env: dev
+
+externalSecret:
+  enabled: true
